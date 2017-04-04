@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <form action="/user" method="post">
+        <input name="authenticity_token" value="<%=form_authenticity_token %>"type="hidden">
+        <div>
+            <label>Your Name:</label>
+            <input type="text" name="user[name]"></br>
+        </div>
+        <div>
+            <label>Dojo Location:</label>
+            <select name='user[location]' class="select" >
+                <option value="Mountain View, CA">Mountain View</option>
+                <option value="Seattle, WA">Seattle</option>
+                <option value="San Francisco, CA">San Francisco</option>
+                <option value="Los Angeles, CA">Los Angeles</option>
+            </select>
+        </div>
+        <div>
+            <label>Favorite Language:</label>
+            <select name='user[language]' class="select">
+                <option value="JavaScript">JavaScript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Ruby">Ruby</option>
+            </select>
+        </div>
+        <div>
+            <label>Comment(optional):</label></br>
+            <textarea name='user[comment]' cols="30" rows="5"></textarea></br>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>

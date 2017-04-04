@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <%if flash[:success] %>
+    <div class="success">
+        <p><%= flash[:success] %></p>
+    </div>
+    <% end %>
+    <table id="form">
+        <tr>
+            <td><a href="">Submitted Information</a></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><%= @result['name'] %></td>
+        </tr>
+        <tr>
+            <td>Dojo Location:</td>
+            <td><%= @result['location'] %></td>
+        </tr>
+        <tr>
+            <td>Favorite Language:</td>
+            <td><%= @result['language'] %></td>
+        </tr>
+        <tr>
+            <td>Comment:</td>
+            <td><%= @result['comment'] %></td>
+        </tr>
+        <tr>
+            <td><%= link_to "Go back", root_path %></td>
+        </tr>
+    </table>
+</div>
